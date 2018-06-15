@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ncurses.h>
 #include <time.h>
+#include "player.h"
 /*#include "enemigos.h"
 #include "attilan.h"
 #include "black_dwarf.h"
@@ -13,7 +14,8 @@
 using namespace std;
 
 int main(int argc,char ** argv){
-    initscr();
+
+   initscr();
     noecho();
     curs_set(FALSE);
     //ventana 1 juego
@@ -27,6 +29,10 @@ int main(int argc,char ** argv){
     refresh();
     box(win1,0,0);
     mvwprintw(win1,0,59,"INFINITY WAR");
+    mvwprintw(win1,1,1,"+");
+    mvwprintw(win1,1,123,"+");
+    mvwprintw(win1,33,1,"+");
+    mvwprintw(win1,33,123,"+");
     wrefresh(win1);
 
     //ventana 2 VIDASS
@@ -54,15 +60,12 @@ int main(int argc,char ** argv){
     box(win3,0,0);
     mvwprintw(win3,0,12,"SCORE");
     wrefresh(win3);
-    
-
-
-
-
-
-
-
-
+    //------------------------------------
+    player* p=new player(win1,1,1,'@');
+    do{
+        p->display();
+        wrefresh(win1);
+    }while(p->getmv()!='x');
 
 
     int c=getch();
