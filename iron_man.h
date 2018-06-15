@@ -6,9 +6,10 @@ class iron_man:public vengadores{
 
     protected:
 
-    private:
-        iron_man(int,int);
+    public:
+        iron_man(int,int,int);
         virtual bool ataque();
+        
 
 };
 #endif

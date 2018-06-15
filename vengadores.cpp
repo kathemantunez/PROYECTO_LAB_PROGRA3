@@ -4,6 +4,7 @@
 vengadores::vengadores(int _vida,int _puntos){
   vida=_vida;
   puntos=_puntos;
+  
 }
         
 void vengadores::setpuntos(int _puntos){

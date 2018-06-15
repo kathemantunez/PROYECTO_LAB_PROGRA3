@@ -29,10 +29,6 @@ int main(int argc,char ** argv){
     refresh();
     box(win1,0,0);
     mvwprintw(win1,0,59,"INFINITY WAR");
-    mvwprintw(win1,1,1,"+");
-    mvwprintw(win1,1,123,"+");
-    mvwprintw(win1,33,1,"+");
-    mvwprintw(win1,33,123,"+");
     wrefresh(win1);
 
     //ventana 2 VIDASS
@@ -61,7 +57,8 @@ int main(int argc,char ** argv){
     mvwprintw(win3,0,12,"SCORE");
     wrefresh(win3);
     //------------------------------------
-    player* p=new player(win1,1,1,'@');
+    //movimiento de nave
+    player* p=new player(win1,33,59,'@');
     do{
         p->display();
         wrefresh(win1);

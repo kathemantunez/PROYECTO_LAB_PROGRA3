@@ -5,7 +5,8 @@ class vengadores{
 
     protected:
         int vida;
-        int puntos;
+        int puntos
+        
 
 
     public:
@@ -16,6 +17,8 @@ class vengadores{
         int getpuntos();
         int getvidad();
         void setvidas(int);
+        void crearnave(int);
+        
 
 
 
