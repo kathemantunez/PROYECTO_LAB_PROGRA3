@@ -13,7 +13,11 @@ nave::nave(){
 */
 
 void nave::crearnave(int x,int y){
-    for()
+    for(int i=0;i<x;i++){
+        for(int j=0;j<y;j++){
+            
+        }
+    }
 
 }
 void
